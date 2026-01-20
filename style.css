@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+.mobile-view {
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    padding: 0 0.4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 6rem;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.right-side-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.right-side-icons i {
+    font-size: 1.2rem;
+}
+
+/* Mobile: show menu, hide button */
+.right-side-icons .ri-menu-line {
+    display: block;
+}
+
+.right-side-icons .btn-3 {
+    /* display: none; */
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: #611F69;
+    color: white;
+}
+
+.left-links {
+    display: none;
+}
+
+.btn-1,
+.btn-2 {
+    all: unset;
+    display: none;
+}
+
+@media (min-width:0px) {
+    .right-side-icons i {
+        display: none;
+    }
+    .right-side-icons .ri-menu-line {
+        display: none;
+    }
+
+    .right-side-icons button {
+        display: none;
+    }
+}
+
+@media (min-width: 375px) {
+     .right-side-icons i {
+        display: initial;
+    }
+    .right-side-icons .btn-1 , .right-side-icons .btn-2 {
+        display: none;
+    }
+    .right-side-icons .ri-menu-line {
+        display: initial;
+    }
+
+    .right-side-icons button {
+        display: initial;
+    }
+}
+/* Tablet view */
+@media (min-width: 540px) {
+
+    .logo {
+        width: 6.5rem;
+    }
+
+    .right-side-icons button {
+        display: block;
+    }
+    .left-links{
+        display: none;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .mobile-view {
+        padding: 1rem 2.8rem;
+    }
+
+    .logo {
+        width: 6rem;
+    }
+
+    .right-side-icons .ri-menu-line {
+        display: none;
+        /* hide hamburger on desktop */
+    }
+
+    .left {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .left-links {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .left-links a {
+        text-decoration: none;
+        color: black;
+
+    }
+
+    .btn-1 {
+        background-color: transparent;
+    }
+
+     .right-side-icons .btn-1 , .right-side-icons .btn-2 {
+        display: block  ;
+    }
+    .btn-2 {
+        padding: .7rem 1rem;
+        border: 1px solid #611F69;
+        border-radius: .3rem;
+    }
+
+    .right-side-icons .btn-3 {
+        padding: 0.8rem 1rem;
+    }
+}
